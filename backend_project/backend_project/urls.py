@@ -1,10 +1,10 @@
 from django.conf import settings
-from django.conf.urls import include, url
+from django.conf.urls import include, url, path
 from django.contrib import admin
 
 urlpatterns = [
-    url(r'^store/', include('store.urls')),
     url(r'^admin/', admin.site.urls),
+    path('', include('myapi.urls')),
 ]
 
 if settings.DEBUG:
